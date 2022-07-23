@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../program2.ts"],
+  "sourcesContent": ["interface Poetry {\n  name: string | Number,\n  author: string | Number,\n  nobel: Boolean,\n  genre: string[],\n  age: Number\n}\n\nconst arthur : Poetry = {\n  name: 'Happy As If I Kissed A Girl',\n  author: 'Arthur Rimbaud',\n  nobel: false,\n  genre: ['Romantic', 'Lyrical'],\n  age: 45\n}\n\nconst PrintPoetry = (poet : Poetry) => {\n  console.log(`Name: ${poet.name},\\nAuthor: ${poet.author},\\nNobel Prize: ${poet.nobel},\\nGenre: ${poet.genre},\\nAge: ${poet.age}`)}\n\nPrintPoetry(arthur)"],
+  "mappings": "AAQA,MAAM,SAAkB;AAAA,EACtB,MAAM;AAAA,EACN,QAAQ;AAAA,EACR,OAAO;AAAA,EACP,OAAO,CAAC,YAAY;AAAA,EACpB,KAAK;AAAA;AAGP,MAAM,cAAc,CAAC,SAAkB;AACrC,UAAQ,IAAI,SAAS,KAAK;AAAA,UAAkB,KAAK;AAAA,eAAyB,KAAK;AAAA,SAAkB,KAAK;AAAA,OAAgB,KAAK;AAAA;AAE7H,YAAY;",
+  "names": []
+}

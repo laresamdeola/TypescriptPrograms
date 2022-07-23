@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../program.ts"],
+  "sourcesContent": ["type Book = {\n  title: string | Number,\n  author: string,\n  yearOfPublication: Number | null,\n  publicationHouse: string | null,\n  genre: string | null\n}\n\nconst thingsFallApart : Book = {\n  title: 'Things Fall Apart',\n  author: 'Chinua Achebe',\n  yearOfPublication: 1962,\n  publicationHouse: 'Heinamann',\n  genre: 'Literature'\n}\n\nconst lionAndJewel : Book = {\n  title: 'Lion and the Jewel',\n  author: 'Wole Soyinka',\n  yearOfPublication: 1970,\n  publicationHouse: null,\n  genre: 'Literature'\n}\n\nconst PrintLiterature = (book : Book) => {\n  console.log(`Title: ${book.title}, \\n Author: ${book.author}`)\n}\n\nPrintLiterature(lionAndJewel)"],
+  "mappings": "AAQA,MAAM,kBAAyB;AAAA,EAC7B,OAAO;AAAA,EACP,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,kBAAkB;AAAA,EAClB,OAAO;AAAA;AAGT,MAAM,eAAsB;AAAA,EAC1B,OAAO;AAAA,EACP,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,kBAAkB;AAAA,EAClB,OAAO;AAAA;AAGT,MAAM,kBAAkB,CAAC,SAAgB;AACvC,UAAQ,IAAI,UAAU,KAAK;AAAA,WAAqB,KAAK;AAAA;AAGvD,gBAAgB;",
+  "names": []
+}
