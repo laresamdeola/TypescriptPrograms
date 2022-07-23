@@ -34,7 +34,7 @@ const calculate = (calc: calculator) => {
   return value
 }
 
-const valueOne = {
+const valueOne : calculator = {
   firstNumber: 100,
   secondNumber: 1000,
   action: 'multiply'

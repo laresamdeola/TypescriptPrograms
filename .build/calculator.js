@@ -11,15 +11,15 @@ const calculate = (calc) => {
       value = calc.firstNumber / calc.secondNumber;
       break;
     case "multiply":
-      value = calc.firstNumber / calc.secondNumber;
+      value = calc.firstNumber * calc.secondNumber;
       break;
   }
   return value;
 };
 const valueOne = {
-  firstNumber: 2,
-  secondNumber: 1,
-  action: "add"
+  firstNumber: 100,
+  secondNumber: 1e3,
+  action: "multiply"
 };
 console.log(calculate(valueOne));
-//# sourceMappingURL=program3.js.map
+//# sourceMappingURL=calculator.js.map

@@ -11,11 +11,11 @@ const countryLifeExpectancy = {
 const remainingYears = (life) => {
   let date = new Date();
   let year = date.getFullYear();
-  let currentAge = year - life.yearOfBirth;
+  let currentAge = life.yearOfBirth - year;
   let countryExpectancy = life.residentCountry;
   let lifeExpectancy = 0;
   for (let i in countryLifeExpectancy) {
-    if (i == countryExpectancy) {
+    if (countryLifeExpectancy[i] == countryExpectancy) {
       if (life.gender == "male") {
         lifeExpectancy = countryLifeExpectancy[i].male - currentAge;
       }
@@ -24,12 +24,12 @@ const remainingYears = (life) => {
       }
     }
   }
-  return lifeExpectancy.toFixed();
+  return lifeExpectancy;
 };
 const satoglu = {
-  yearOfBirth: 1989,
+  yearOfBirth: 1983,
   residentCountry: "Japan",
   gender: "male"
 };
-console.log(`You have ${remainingYears(satoglu)} years left.`);
-//# sourceMappingURL=index.js.map
+console.log(remainingYears(satoglu));
+//# sourceMappingURL=age.js.map
