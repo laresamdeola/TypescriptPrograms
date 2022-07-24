@@ -1,3 +1,4 @@
+/*
 const countryLifeExpectancy = {
   HongKong: {
     male: 82.38,
@@ -7,7 +8,7 @@ const countryLifeExpectancy = {
     male: 81.91,
     female: 88.09
   }
-  ,{},{},{},{},{},{},{},{}
 }
 
 export { countryLifeExpectancy }
+*/

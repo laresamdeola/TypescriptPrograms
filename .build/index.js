@@ -16,30 +16,34 @@ var __reExport = (target, module2, desc) => {
 var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
-var import_data = __toModule(require("./data.js"));
+var import_life = __toModule(require("./life.js"));
+var lifeExpectancy;
 const remainingYears = (life) => {
   let date = new Date();
   let year = date.getFullYear();
   let currentAge = year - life.yearOfBirth;
   let countryExpectancy = life.residentCountry;
-  let lifeExpectancy = 0;
-  for (let i in import_data.countryLifeExpectancy) {
-    if (i == countryExpectancy) {
-      if (life.gender == "male") {
-        lifeExpectancy = import_data.countryLifeExpectancy[i].male - currentAge;
-      }
-      if (life.gender == "female") {
-        lifeExpectancy = import_data.countryLifeExpectancy[i].female - currentAge;
-      }
+  let message;
+  const [countries, expectancies] = import_life.countryLifeExpectancy;
+  const countryNames = countries.country;
+  const listOfCountries = Object.values(countryNames);
+  const expectancyYears = expectancies.years;
+  const listOfExpectancies = Object.values(expectancyYears);
+  for (let value in listOfCountries) {
+    if (listOfCountries[value] == countryExpectancy) {
+      lifeExpectancy = Number(listOfExpectancies[listOfCountries.indexOf(countryExpectancy)].toFixed());
+      lifeExpectancy = lifeExpectancy - currentAge;
     }
   }
-  return lifeExpectancy.toFixed();
+  return lifeExpectancy;
 };
 const satoglu = {
   yearOfBirth: 2e3,
-  residentCountry: "HongKong",
-  gender: "female"
+  residentCountry: "Mali"
 };
-console.log(`You have ${remainingYears(satoglu)} years left.`);
-console.log(import_data.countryLifeExpectancy);
+if (lifeExpectancy === 0) {
+  console.log(`Sorry ${satoglu.residentCountry}'s data is not available`);
+} else {
+  console.log(`You have ${remainingYears(satoglu)} years left.`);
+}
 //# sourceMappingURL=index.js.map

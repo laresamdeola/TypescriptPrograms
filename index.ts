@@ -114,12 +114,11 @@ const printLanguage = (lang : language) => {
 printLanguage(languageOne)
 */
 
-import { countryLifeExpectancy } from './data.js'
+import { countryLifeExpectancy } from './life.js'
 
 interface age {
   yearOfBirth: number,
-  residentCountry: string,
-  gender: string
+  residentCountry: string
 }
 
 /*
@@ -134,34 +133,51 @@ const countryLifeExpectancy = {
     }
 }
 */
+//console.log(countryLifeExpectancy)
 
+var lifeExpectancy: number
 
-const remainingYears = (life : age) => {
+const remainingYears = (life: age) => {
   let date = new Date()
   let year = date.getFullYear()
   let currentAge = year - life.yearOfBirth
   let countryExpectancy = life.residentCountry
-  let lifeExpectancy = 0
 
-  for(let i in countryLifeExpectancy){
-    if(i == countryExpectancy) {
-      if(life.gender == 'male') {
-        lifeExpectancy = countryLifeExpectancy[i].male - currentAge
-      }
-      if(life.gender == 'female') {
-        lifeExpectancy = countryLifeExpectancy[i].female - currentAge
-      } 
+  // Destructuring countries
+
+  const [countries, expectancies] = countryLifeExpectancy
+  const countryNames = countries.country
+  const listOfCountries = Object.values(countryNames)
+
+  // Destructuring life expectancy
+
+  const expectancyYears = expectancies.years
+  const listOfExpectancies = Object.values(expectancyYears)
+
+  //console.log(listOfExpectancies)
+
+  for (let value in listOfCountries) {
+    if (listOfCountries[value] == countryExpectancy) {
+      lifeExpectancy = Number(listOfExpectancies[(listOfCountries.indexOf(countryExpectancy))].toFixed())
+      lifeExpectancy = lifeExpectancy - currentAge
     }
   }
 
-  return lifeExpectancy.toFixed()
+  return lifeExpectancy
 }
 
-const satoglu : age = {
+const satoglu: age = {
   yearOfBirth: 2000,
-  residentCountry: 'HongKong',
-  gender: 'female'
+  residentCountry: 'Mali'
 }
 
-console.log(`You have ${remainingYears(satoglu)} years left.`)
+if (lifeExpectancy === 0) {
+  console.log(`Sorry ${satoglu.residentCountry}\'s data is not available`)
+} else {
+  console.log(`You have ${remainingYears(satoglu)} years left.`)
+}
+
+
+
+
 
