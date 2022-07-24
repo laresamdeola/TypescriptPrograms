@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../data.js"],
+  "sourcesContent": ["const countryLifeExpectancy = {\n  HongKong: {\n    male: 82.38,\n    female: 88.17\n  },\n  Japan: {\n    male: 81.91,\n    female: 88.09\n  }\n}\n\nexport { countryLifeExpectancy }"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA,MAAM,wBAAwB;AAAA,EAC5B,UAAU;AAAA,IACR,MAAM;AAAA,IACN,QAAQ;AAAA;AAAA,EAEV,OAAO;AAAA,IACL,MAAM;AAAA,IACN,QAAQ;AAAA;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../fetch.ts"],
+  "sourcesContent": ["let url = 'https://www.worldometers.info/demographics/life-expectancy/'\n  \nconst fetchData = async () => {\n  let data = await fetch(url)\n  let text = await data.text()\n  console.log(text)\n}\n\nfetchData()"],
+  "mappings": "AAAA,IAAI,MAAM;AAEV,MAAM,YAAY,YAAY;AAC5B,MAAI,OAAO,MAAM,MAAM;AACvB,MAAI,OAAO,MAAM,KAAK;AACtB,UAAQ,IAAI;AAAA;AAGd;",
+  "names": []
+}

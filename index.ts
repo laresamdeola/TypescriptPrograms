@@ -114,12 +114,15 @@ const printLanguage = (lang : language) => {
 printLanguage(languageOne)
 */
 
+import { countryLifeExpectancy } from './data.js'
+
 interface age {
   yearOfBirth: number,
   residentCountry: string,
   gender: string
 }
 
+/*
 const countryLifeExpectancy = {
   HongKong : {
     male: 82.38,
@@ -130,6 +133,7 @@ const countryLifeExpectancy = {
     female: 88.09
     }
 }
+*/
 
 
 const remainingYears = (life : age) => {
@@ -154,9 +158,10 @@ const remainingYears = (life : age) => {
 }
 
 const satoglu : age = {
-  yearOfBirth: 1989,
-  residentCountry: 'Japan',
-  gender: 'male'
+  yearOfBirth: 2000,
+  residentCountry: 'HongKong',
+  gender: 'female'
 }
 
 console.log(`You have ${remainingYears(satoglu)} years left.`)
+

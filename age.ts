@@ -8,12 +8,15 @@ Steps:
 4. Substract the life expectancy from the current age to know how many years left.
 */
 
+import { countryLifeExpectancy } from './data.js'
+
 interface age {
   yearOfBirth: number,
   residentCountry: string,
   gender: string
 }
 
+/*
 const countryLifeExpectancy = {
   HongKong: {
     male: 82.38,
@@ -24,6 +27,7 @@ const countryLifeExpectancy = {
     female: 88.09
   }
 }
+*/
 
 const remainingYears = (life: age) => {
   let date = new Date()
@@ -39,6 +43,10 @@ const remainingYears = (life: age) => {
       }
       if (life.gender == 'female') {
         lifeExpectancy = countryLifeExpectancy[i].female - currentAge
+      }
+      else {
+        alert('Enter the right country')
+        console.log('Country not in the list')
       }
     }
   }
