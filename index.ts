@@ -1,4 +1,3 @@
-
 /*
 type stringOrNumber = string | Number;
 
@@ -114,12 +113,14 @@ const printLanguage = (lang : language) => {
 printLanguage(languageOne)
 */
 
+/*
 import { countryLifeExpectancy } from './life.js'
 
 interface age {
   yearOfBirth: number,
   residentCountry: string
 }
+*/
 
 /*
 const countryLifeExpectancy = {
@@ -135,6 +136,7 @@ const countryLifeExpectancy = {
 */
 //console.log(countryLifeExpectancy)
 
+/*
 var lifeExpectancy: number
 
 const remainingYears = (life: age) => {
@@ -142,20 +144,22 @@ const remainingYears = (life: age) => {
   let year = date.getFullYear()
   let currentAge = year - life.yearOfBirth
   let countryExpectancy = life.residentCountry
+*/
+// Destructuring countries
 
-  // Destructuring countries
-
+/*
   const [countries, expectancies] = countryLifeExpectancy
   const countryNames = countries.country
   const listOfCountries = Object.values(countryNames)
+*/
+// Destructuring life expectancy
 
-  // Destructuring life expectancy
-
+/*
   const expectancyYears = expectancies.years
   const listOfExpectancies = Object.values(expectancyYears)
-
-  //console.log(listOfExpectancies)
-
+*/
+//console.log(listOfExpectancies)
+/*
   for (let value in listOfCountries) {
     if (listOfCountries[value] == countryExpectancy) {
       lifeExpectancy = Number(listOfExpectancies[(listOfCountries.indexOf(countryExpectancy))].toFixed())
@@ -176,8 +180,48 @@ if (lifeExpectancy === 0) {
 } else {
   console.log(`You have ${remainingYears(satoglu)} years left.`)
 }
+*/
 
+/*
+interface Color<T> {
+  name: String,
+  intensity: String | Number,
+  family: T
+}
 
+const red: Color<String> = {
+  name: 'Red',
+  intensity: 'Passion',
+  family: 'Primary'
+}
 
+const PrintColor = (c: Color<String>) => {
+  console.log(c.family);
+  console.log(c.name);
+  console.log(c.intensity);
+}
 
+PrintColor(red);
+*/
 
+interface Family<T> {
+  name: String,
+  age: Number,
+  isMarried: Boolean,
+  birthPosition: String | Number,
+  occupation: T
+}
+
+const yourFamily = (member: Family<String>) => {
+  console.log(`${member.name}\n${member.age}\n${member.isMarried}\n${member.birthPosition}\n${member.occupation}`)
+}
+
+let lare: Family<String> = {
+  name: 'Damilare',
+  age: 31,
+  isMarried: false,
+  birthPosition: 'Fifth',
+  occupation: 'Computer Scientist & Machine Learning Engineer'
+}
+
+yourFamily(lare);

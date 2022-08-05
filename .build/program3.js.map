@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../program3.ts"],
+  "sourcesContent": ["/*\nTo build a simple calculator using typescript\n\nFirst we need to create an interface for the calculating command i.e first number, second number\nand what action to perform (add, substract, divide and multiply)\n\nThen a function that takes this object and returns the output value. I'd use a conditional here,\npreferably the switch statement.\n\n*/\n\ninterface calculator {\n  firstNumber: number,\n  secondNumber: number,\n  action: string \n}\n\nconst calculate = (calc : calculator) => {\n  let value : number = 0\n  switch(calc.action){\n    case 'add':\n      value = calc.firstNumber + calc.secondNumber\n      break;\n    case ('substract'):\n      value = calc.firstNumber - calc.secondNumber\n      break;\n    case 'divide':\n      value = calc.firstNumber / calc.secondNumber\n      break;\n    case 'multiply':\n      value = calc.firstNumber * calc.secondNumber\n      break;\n  }\n  return value\n}\n\nconst valueOne = {\n  firstNumber: 100,\n  secondNumber: 1000,\n  action: 'multiply'\n}\n\nconsole.log(calculate(valueOne))"],
+  "mappings": "AAiBA,MAAM,YAAY,CAAC,SAAsB;AACvC,MAAI,QAAiB;AACrB,UAAO,KAAK;AAAA,SACL;AACH,cAAQ,KAAK,cAAc,KAAK;AAChC;AAAA,SACI;AACJ,cAAQ,KAAK,cAAc,KAAK;AAChC;AAAA,SACG;AACH,cAAQ,KAAK,cAAc,KAAK;AAChC;AAAA,SACG;AACH,cAAQ,KAAK,cAAc,KAAK;AAChC;AAAA;AAEJ,SAAO;AAAA;AAGT,MAAM,WAAW;AAAA,EACf,aAAa;AAAA,EACb,cAAc;AAAA,EACd,QAAQ;AAAA;AAGV,QAAQ,IAAI,UAAU;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../program4.ts"],
+  "sourcesContent": ["interface Color <T> {\n  name: String,\n  intensity: String | Number,\n  family: T\n}\n\nconst red : Color<String> = {\n  name: 'Red',\n  intensity: 'Passion',\n  family: 'Primary'\n}\n\nconst PrintColor = (c : Color<String>) => {\n  console.log(c.family);  \n}\n\nPrintColor(red);"],
+  "mappings": "AAMA,MAAM,MAAsB;AAAA,EAC1B,MAAM;AAAA,EACN,WAAW;AAAA,EACX,QAAQ;AAAA;AAGV,MAAM,aAAa,CAAC,MAAsB;AACxC,UAAQ,IAAI,EAAE;AAAA;AAGhB,WAAW;",
+  "names": []
+}

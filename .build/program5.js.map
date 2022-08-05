@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../program5.ts"],
+  "sourcesContent": ["interface Family<T> {\n  name: String,\n  age: Number,\n  isMarried: Boolean,\n  birthPosition: String | Number,\n  occupation: T\n}\n\nconst yourFamily = (member: Family<String>) => {\n  console.log(`${member.name}\\n${member.age}\\n${member.isMarried}\\n${member.birthPosition}\\n${member.occupation}`)\n}\n\nlet lare: Family<String> = {\n  name: 'Damilare',\n  age: 31,\n  isMarried: false,\n  birthPosition: 'Fifth',\n  occupation: 'Computer Scientist & Machine Learning Engineer'\n}\n\nyourFamily(lare);"],
+  "mappings": "AAQA,MAAM,aAAa,CAAC,WAA2B;AAC7C,UAAQ,IAAI,GAAG,OAAO;AAAA,EAAS,OAAO;AAAA,EAAQ,OAAO;AAAA,EAAc,OAAO;AAAA,EAAkB,OAAO;AAAA;AAGrG,IAAI,OAAuB;AAAA,EACzB,MAAM;AAAA,EACN,KAAK;AAAA,EACL,WAAW;AAAA,EACX,eAAe;AAAA,EACf,YAAY;AAAA;AAGd,WAAW;",
+  "names": []
+}

@@ -13,4 +13,4 @@ let lare = {
   occupation: "Computer Scientist & Machine Learning Engineer"
 };
 yourFamily(lare);
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=program5.js.map
